@@ -1,0 +1,19 @@
+<div class="container">
+
+    <form [formGroup]="loginForm" novalidate="" (ngSubmit)="onSubmit(loginForm.value)">
+        <h1 class="text-center mb-5">Login</h1>
+        <div class="form-group">
+            <input type="text" placeholder="userName" class="form-control" formControlName="userName" required />
+            <span class=" mt-1 error error-danger text-danger text-center" *ngIf="!loginForm.controls['userName'].valid && loginForm.controls['userName'].touched">Please enter your userName</span>
+        </div>
+        <div class="form-group">
+            <input type="password" formControlName="password" class="form-control" placeholder="Password" required/>
+            <span class=" mt-1 error error-danger text-danger text-center" *ngIf="!loginForm.controls['password'].valid && loginForm.controls['password'].touched">Please enter your password</span>
+        </div>
+        <span class=" mt-1 error error-danger text-danger text-center" *ngIf="alertdan">Please enter your details</span>
+        <button class="btn" class="submit" type="submit">Log in</button>
+        <p class="mt-5 text-center">Dont have Account Click here to
+            <a href="register" class="text-success">register</a>
+        </p>
+    </form>
+</div>

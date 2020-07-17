@@ -1,0 +1,90 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+    background: #EBECF0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+$ruler: 15px;
+$color-red: #AE1100;
+$color-green: rgb(0, 174, 38);
+$color-bg: #EBECF0;
+$color-shadow: #BABECC;
+$color-white: #FFF;
+form {
+    width: 520px;
+    color: $color-shadow;
+    text-shadow: 1px 1px 1px $color-white;
+    border: 1px solid darken($color: #EBECF0, $amount: 5);
+    padding: $ruler;
+    margin: 5% auto;
+    box-shadow: inset 2px 2px 10px $color-shadow, inset -5px -15px 35px $color-white;
+}
+
+.submit,
+.button .form-control {
+    border: 0;
+    outline: 0;
+    font-size: $ruler;
+    border-radius: $ruler*10;
+    padding: $ruler;
+    background-color: $color-bg;
+    text-shadow: 1px 1px 0 $color-white;
+}
+
+label {
+    display: block;
+    margin-bottom: $ruler*1.5;
+    width: 100%;
+}
+
+.form-control {
+    margin-right: $ruler/2;
+    padding: 5%;
+    box-shadow: inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-white;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+    &:focus {
+        box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+    }
+}
+
+.boxShadow {
+    box-shadow: 0px 2px 6px #BABECC
+}
+
+.submit,
+.button {
+    color: #61677C;
+    font-weight: bold;
+    display: block;
+    border: none!important;
+    width: 100%;
+    color: $color-green;
+    box-shadow: -5px -5px 20px $color-white, 5px 5px 20px $color-shadow;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+    &:hover {
+        box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+    }
+    &:active {
+        box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+    }
+}
+
+.button {
+    padding: 2px;
+    width: 20%;
+    color: darken($color: #ccc, $amount: 9);
+    display: inline-block;
+    margin: 2% !important;
+}

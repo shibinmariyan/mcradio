@@ -1,0 +1,33 @@
+<div class="container">
+
+</div>
+
+<form [formGroup]="regForm" novalidate="" (ngSubmit)="onSubmit(regForm.value)">
+    <h1 class="text-center mb-5">Register</h1>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="What we calls you?" formControlName="name" required />
+        <span class=" mt-1 error error-danger text-danger text-center" *ngIf="!regForm.controls['name'].valid && regForm.controls['name'].touched">Please enter your Name</span>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="What's your email?" formControlName="email" required />
+        <span class=" mt-1 error error-danger text-danger text-center" *ngIf="!regForm.controls['email'].valid && regForm.controls['email'].touched">Please enter your email</span>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="What's your mobileNo?" formControlName="mobileNo" required />
+        <span class=" mt-1 error error-danger text-danger text-center" *ngIf="!regForm.controls['mobileNo'].valid && regForm.controls['mobileNo'].touched">Please enter your email</span>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Tell me your userName" formControlName="userName" required />
+        <span class=" mt-1 error error-danger text-danger text-center" *ngIf="!regForm.controls['userName'].valid && regForm.controls['userName'].touched">Please enter your userName</span>
+    </div>
+    <div class="form-group">
+        <input type="password" formControlName="password" class="form-control" placeholder="Tell me your secret Code " required/>
+        <span class=" mt-1 error error-danger text-danger text-center" *ngIf="!regForm.controls['password'].valid && regForm.controls['password'].touched">Please enter your password</span>
+
+    </div>
+    <span class=" mt-1 error error-danger text-danger text-center" *ngIf="alertdan">Please enter your details</span>
+
+    <button type="submit" class="submit" [disabled]="!regForm.value">Register</button>
+    <p class="mt-5 text-center">Already have Account Click here to
+        <a href="/login" class="text-success">Login</a></p>
+</form>
